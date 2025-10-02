@@ -712,6 +712,321 @@
         input[type="email"] {
             direction: ltr;
         }
+
+        /* تأثير التحميل للأزرار */
+        .loading {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+            margin-left: 8px;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* تحسينات الأزرار والتصميم */
+        .btn {
+            font-family: 'Cairo', sans-serif;
+            font-weight: 600;
+            border-radius: 8px;
+            padding: 12px 20px;
+            transition: all 0.3s ease;
+            border: none;
+            position: relative;
+            overflow: hidden;
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none !important;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn-lg {
+            padding: 15px 25px;
+            font-size: 16px;
+            min-height: 52px;
+        }
+
+        /* ألوان الأزرار المحسنة */
+        .btn-primary {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+            color: white;
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: linear-gradient(135deg, #1e7e34 0%, #155724 100%);
+            color: white;
+        }
+
+        .btn-info {
+            background: linear-gradient(135deg, #17a2b8 0%, #117a8b 100%);
+            color: white;
+        }
+
+        .btn-info:hover {
+            background: linear-gradient(135deg, #117a8b 0%, #0c5460 100%);
+            color: white;
+        }
+
+        .btn-outline-primary {
+            border: 2px solid #007bff;
+            color: #007bff;
+            background: transparent;
+        }
+
+        .btn-outline-primary:hover {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+
+        .btn-outline-info {
+            border: 2px solid #17a2b8;
+            color: #17a2b8;
+            background: transparent;
+        }
+
+        .btn-outline-info:hover {
+            background: #17a2b8;
+            color: white;
+            border-color: #17a2b8;
+        }
+
+        .btn-outline-warning {
+            border: 2px solid #ffc107;
+            color: #856404;
+            background: transparent;
+        }
+
+        .btn-outline-warning:hover {
+            background: #ffc107;
+            color: #212529;
+            border-color: #ffc107;
+        }
+
+        .btn-warning {
+            background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%);
+            color: #212529;
+            font-weight: 700;
+        }
+
+        .btn-warning:hover {
+            background: linear-gradient(135deg, #e0a800 0%, #d39e00 100%);
+            color: #212529;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 193, 7, 0.3);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: linear-gradient(135deg, #c82333 0%, #bd2130 100%);
+            color: white;
+        }
+
+        /* منع التداخل والتحسينات العامة */
+        .card {
+            border: none;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .d-grid {
+            display: grid !important;
+        }
+
+        .gap-2 {
+            gap: 0.5rem !important;
+        }
+
+        .gap-3 {
+            gap: 1rem !important;
+        }
+
+        /* تحسين المسافات */
+        .mb-4 {
+            margin-bottom: 1.5rem !important;
+        }
+
+        .my-4 {
+            margin-top: 1.5rem !important;
+            margin-bottom: 1.5rem !important;
+        }
+
+        /* تحسين الخطوط والنصوص */
+        .card-title {
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .text-muted {
+            opacity: 0.7;
+        }
+
+        /* تحسين الأيقونات */
+        .fas, .fab {
+            width: 20px;
+            text-align: center;
+        }
+
+        /* تحسين الخطوط الفاصلة */
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #dee2e6, transparent);
+            margin: 1.5rem 0;
+        }
+
+        /* تحسينات الريسبونسيف النهائية */
+        @media (max-width: 400px) {
+            .btn {
+                font-size: 13px;
+                padding: 10px 15px;
+                min-height: 44px;
+            }
+            
+            .btn-lg {
+                font-size: 14px;
+                padding: 12px 18px;
+                min-height: 48px;
+            }
+            
+            .d-grid .btn {
+                width: 100%;
+                margin-bottom: 8px;
+            }
+            
+            .mb-4 {
+                margin-bottom: 1rem !important;
+            }
+            
+            .my-4 {
+                margin-top: 1rem !important;
+                margin-bottom: 1rem !important;
+            }
+            
+            hr {
+                margin: 1rem 0;
+            }
+            
+            .card-body {
+                padding: 1rem;
+            }
+            
+            .container {
+                padding: 0 10px;
+            }
+        }
+
+        @media (max-width: 768px) and (min-width: 401px) {
+            .btn {
+                min-height: 46px;
+                font-size: 14px;
+            }
+            
+            .btn-lg {
+                min-height: 50px;
+                font-size: 15px;
+            }
+            
+            .card-body {
+                padding: 1.25rem;
+            }
+        }
+
+        @media (max-width: 992px) and (min-width: 769px) {
+            .btn {
+                min-height: 48px;
+            }
+            
+            .btn-lg {
+                min-height: 52px;
+            }
+        }
+
+        /* تحسين التداخل والمسافات */
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item {
+            margin-bottom: 2rem;
+        }
+
+        .card + .card {
+            margin-top: 1.5rem;
+        }
+
+        /* تحسين الأيقونات */
+        .fas, .fab {
+            width: 20px;
+            text-align: center;
+            display: inline-block;
+        }
+
+        /* تحسين النصوص */
+        .text-muted {
+            color: #6c757d !important;
+        }
+
+        .small {
+            font-size: 0.875em;
+        }
+
+        /* تحسين الظلال */
+        .shadow-sm {
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+        }
+
+        /* تحسين الحدود */
+        .border-0 {
+            border: 0 !important;
+        }
+
+        /* تحسين المحاذاة */
+        .text-center {
+            text-align: center !important;
+        }
+
+        .text-end {
+            text-align: end !important;
+        }
+
+        .text-start {
+            text-align: start !important;
+        }
         
         /* Enhanced Arabic Typography */
         h1, h2, h3, h4, h5, h6 {
@@ -1526,12 +1841,14 @@
                     <div class="timeline">
                         <div class="timeline-item" data-aos="fade-right">
                             <div class="timeline-content">
-                                <h5><i class="fas fa-handshake text-primary me-2"></i>الأسبوع الأول</h5>
+                                <h5><i class="fas fa-handshake text-primary me-2"></i>الشهر الأول - الأسابيع 1-2</h5>
                                 <ul>
                                     <li>توقيع العقد وسداد الدفعة الأولى</li>
-                                    <li>جلسة تخطيط مفصلة</li>
-                                    <li>جمع المحتوى والمواد</li>
-                                    <li>بدء تطوير الموقع</li>
+                                    <li>جلسة تخطيط مفصلة ودراسة المتطلبات</li>
+                                    <li>جمع المحتوى والمواد والصور</li>
+                                    <li>تصميم الهوية البصرية الكاملة</li>
+                                    <li>بدء تطوير الموقع الإلكتروني</li>
+                                    <li>إنشاء حسابات التواصل الاجتماعي</li>
                                 </ul>
                                 <div class="progress mt-3">
                                     <div class="progress-bar bg-primary" style="width: 25%"></div>
@@ -1541,12 +1858,13 @@
 
                         <div class="timeline-item" data-aos="fade-left">
                             <div class="timeline-content">
-                                <h5><i class="fas fa-code text-success me-2"></i>الأسبوع الثاني</h5>
+                                <h5><i class="fas fa-code text-success me-2"></i>الشهر الأول - الأسابيع 3-4</h5>
                                 <ul>
-                                    <li>إكمال تصميم الموقع</li>
-                                    <li>تحسين Google Business</li>
-                                    <li>إنشاء حسابات التواصل</li>
-                                    <li>بدء تطوير الشات بوت</li>
+                                    <li>إكمال تطوير الموقع الإلكتروني</li>
+                                    <li>برمجة نظام الحجز المتقدم</li>
+                                    <li>تحسين Google Business Profile</li>
+                                    <li>بدء تطوير شات بوت مُعين</li>
+                                    <li>إعداد نظام البريد المؤسسي</li>
                                 </ul>
                                 <div class="progress mt-3">
                                     <div class="progress-bar bg-success" style="width: 50%"></div>
@@ -1556,12 +1874,13 @@
 
                         <div class="timeline-item" data-aos="fade-right">
                             <div class="timeline-content">
-                                <h5><i class="fas fa-test text-info me-2"></i>الأسبوع الثالث</h5>
+                                <h5><i class="fas fa-robot text-info me-2"></i>الشهر الثاني - الأسابيع 1-2</h5>
                                 <ul>
-                                    <li>إكمال برمجة الموقع</li>
-                                    <li>اختبار الشات بوت</li>
+                                    <li>إكمال برمجة شات بوت مُعين</li>
+                                    <li>اختبار جميع الأنظمة والتكاملات</li>
                                     <li>إعداد الحملات الإعلانية</li>
-                                    <li>تجهيز المحتوى</li>
+                                    <li>تجهيز المحتوى التسويقي</li>
+                                    <li>تدريب الفريق على الأنظمة الجديدة</li>
                                 </ul>
                                 <div class="progress mt-3">
                                     <div class="progress-bar bg-info" style="width: 75%"></div>
@@ -1571,12 +1890,14 @@
 
                         <div class="timeline-item" data-aos="fade-left">
                             <div class="timeline-content">
-                                <h5><i class="fas fa-rocket text-warning me-2"></i>الأسبوع الرابع</h5>
+                                <h5><i class="fas fa-rocket text-warning me-2"></i>الشهر الثاني - الأسابيع 3-4</h5>
                                 <ul>
-                                    <li>إطلاق الموقع الإلكتروني</li>
-                                    <li>تفعيل الشات بوت</li>
+                                    <li>الإطلاق التجريبي للموقع الإلكتروني</li>
+                                    <li>تفعيل شات بوت مُعين رسمياً</li>
+                                    <li>الإطلاق الرسمي الكامل</li>
                                     <li>إطلاق الحملات الإعلانية</li>
-                                    <li>بدء استراتيجية المحتوى</li>
+                                    <li>بدء استراتيجية المحتوى طويل المدى</li>
+                                    <li>تسليم جميع المواد والوثائق</li>
                                 </ul>
                                 <div class="progress mt-3">
                                     <div class="progress-bar bg-warning" style="width: 100%"></div>
@@ -1703,28 +2024,77 @@
                         </div>
 
                         <div class="col-lg-4">
-                            <div class="card">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title">
-                                        <i class="fas fa-download text-primary me-2"></i>
-                                        تحميل العقد
-                                    </h5>
-                                    <p class="card-text">احصل على نسخة PDF كاملة من العقد</p>
-                                    
-                                    <button class="btn btn-success btn-lg mb-3" onclick="openContractWithFeedback()" style="width: 100%;">
-                                        <i class="fas fa-file-contract me-2"></i>
-                                        العقد الاحترافي
-                                    </button>
-                                    
-                                    <button class="btn btn-success btn-lg mb-3" onclick="sendWhatsApp()">
-                                        <i class="fab fa-whatsapp me-2"></i>
-                                        إرسال عبر واتساب
-                                    </button>
-                                    
-                                    <button class="btn btn-outline-primary" onclick="printContract()">
-                                        <i class="fas fa-print me-2"></i>
-                                        طباعة العقد
-                                    </button>
+                            <div class="card shadow-sm">
+                                <div class="card-body">
+                                    <!-- قسم العقد -->
+                                    <div class="mb-4">
+                                        <h5 class="card-title text-center mb-3">
+                                            <i class="fas fa-file-contract text-primary me-2"></i>
+                                            العقد الاحترافي
+                                        </h5>
+                                        <p class="card-text text-center text-muted small mb-3">احصل على نسخة كاملة من العقد</p>
+                                        
+                                        <div class="d-grid gap-2">
+                                            <button class="btn btn-warning btn-lg" onclick="openContractWithFeedback()" style="color: #000; font-weight: 700;">
+                                                <i class="fas fa-file-contract me-2"></i>
+                                                العقد الاحترافي
+                                            </button>
+                                            
+                                            <button class="btn btn-danger" onclick="downloadContractAsPDF()">
+                                                <i class="fas fa-file-pdf me-2"></i>
+                                                تحميل PDF
+                                            </button>
+                                            
+                                            <button class="btn btn-outline-primary" onclick="printContract()">
+                                                <i class="fas fa-print me-2"></i>
+                                                طباعة العقد
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <hr class="my-4">
+
+                                    <!-- قسم التواصل -->
+                                    <div class="mb-4">
+                                        <h6 class="text-center mb-3 text-secondary">
+                                            <i class="fas fa-share-alt me-2"></i>
+                                            مشاركة والتواصل
+                                        </h6>
+                                        
+                                        <div class="d-grid gap-2">
+                                            <button class="btn btn-success" onclick="sendWhatsApp()">
+                                                <i class="fab fa-whatsapp me-2"></i>
+                                                إرسال عبر واتساب
+                                            </button>
+                                            
+                                            <button class="btn btn-info" onclick="sendEmail()">
+                                                <i class="fas fa-envelope me-2"></i>
+                                                إرسال بالإيميل
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <hr class="my-4">
+
+                                    <!-- قسم المشاريع والخدمات -->
+                                    <div class="mb-3">
+                                        <h6 class="text-center mb-3 text-secondary">
+                                            <i class="fas fa-rocket me-2"></i>
+                                            استكشف المزيد
+                                        </h6>
+                                        
+                                        <div class="d-grid gap-2">
+                                            <button class="btn btn-outline-info" onclick="window.open('chatbot_details.html', '_blank')">
+                                                <i class="fas fa-robot me-2"></i>
+                                                تفاصيل الشات بوت
+                                            </button>
+                                            
+                                            <button class="btn btn-outline-warning" onclick="window.open('project_overview.html', '_blank')">
+                                                <i class="fas fa-project-diagram me-2"></i>
+                                                نظرة عامة على المشاريع
+                                            </button>
+                                        </div>
+                                    </div>
                                     
                                     <hr>
                                     
@@ -1796,6 +2166,116 @@
             </div>
         </section>
     </main>
+
+    <!-- قسم التواصل -->
+    <section class="py-5 bg-light no-print" id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="text-center mb-5">
+                        <h2 class="display-6 fw-bold text-primary mb-3">
+                            <i class="fas fa-comments me-3"></i>
+                            تواصل معنا
+                        </h2>
+                        <p class="lead text-muted">
+                            نحن هنا لمساعدتك في تحقيق أهدافك الرقمية. اختر الطريقة المناسبة للتواصل معنا
+                        </p>
+                    </div>
+                    
+                    <div class="row g-4">
+                        <!-- الجوال -->
+                        <div class="col-md-4">
+                            <div class="card h-100 text-center border-0 shadow-sm">
+                                <div class="card-body p-4">
+                                    <div class="mb-3">
+                                        <i class="fas fa-mobile-alt fa-3x text-success"></i>
+                                    </div>
+                                    <h5 class="card-title">اتصال مباشر</h5>
+                                    <p class="card-text text-muted small mb-3">
+                                        للاستفسارات العاجلة والمناقشات المباشرة
+                                    </p>
+                                    <a href="tel:+966581421483" class="btn btn-success">
+                                        <i class="fas fa-phone me-2"></i>
+                                        +966 58 142 1483
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- البريد الإلكتروني -->
+                        <div class="col-md-4">
+                            <div class="card h-100 text-center border-0 shadow-sm">
+                                <div class="card-body p-4">
+                                    <div class="mb-3">
+                                        <i class="fas fa-envelope fa-3x text-primary"></i>
+                                    </div>
+                                    <h5 class="card-title">البريد الإلكتروني</h5>
+                                    <p class="card-text text-muted small mb-3">
+                                        للمراسلات الرسمية وإرسال المستندات
+                                    </p>
+                                    <a href="mailto:khaledjamal51@yahoo.com" class="btn btn-primary">
+                                        <i class="fas fa-envelope me-2"></i>
+                                        إرسال إيميل
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- واتساب -->
+                        <div class="col-md-4">
+                            <div class="card h-100 text-center border-0 shadow-sm">
+                                <div class="card-body p-4">
+                                    <div class="mb-3">
+                                        <i class="fab fa-whatsapp fa-3x text-success"></i>
+                                    </div>
+                                    <h5 class="card-title">واتساب</h5>
+                                    <p class="card-text text-muted small mb-3">
+                                        للتواصل السريع ومشاركة الملفات والصور
+                                    </p>
+                                    <a href="https://wa.me/966581421483?text=السلام عليكم، أود الاستفسار عن خدمات الحلول الرقمية" target="_blank" class="btn btn-success">
+                                        <i class="fab fa-whatsapp me-2"></i>
+                                        فتح واتساب
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- معلومات إضافية -->
+                    <div class="row mt-5">
+                        <div class="col-12">
+                            <div class="card border-0 bg-primary text-white">
+                                <div class="card-body text-center p-4">
+                                    <h5 class="card-title mb-3">
+                                        <i class="fas fa-clock me-2"></i>
+                                        أوقات العمل
+                                    </h5>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="mb-2">
+                                                <i class="fas fa-calendar-day me-2"></i>
+                                                <strong>الأحد - الخميس:</strong> 9:00 ص - 6:00 م
+                                            </p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="mb-2">
+                                                <i class="fas fa-moon me-2"></i>
+                                                <strong>الجمعة - السبت:</strong> حسب الحاجة
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="small mb-0 mt-3 opacity-75">
+                                        <i class="fas fa-info-circle me-2"></i>
+                                        نرد على جميع الاستفسارات خلال 24 ساعة كحد أقصى
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4 no-print">
@@ -2160,6 +2640,46 @@
                     }
                 }, 500);
             }, type === 'success' ? 4000 : 2500);
+        }
+
+        // وظيفة إرسال العقد بالإيميل
+        function sendEmail() {
+            const subject = encodeURIComponent('عقد تطوير الحلول الرقمية - مركز الهمم');
+            const body = encodeURIComponent(`السلام عليكم ورحمة الله وبركاته
+
+أرسل لكم عقد تطوير الحلول الرقمية لمركز الهمم.
+
+يمكنكم الاطلاع على العقد من خلال الرابط التالي:
+${window.location.origin}/عقد_العمل_النهائي.html
+
+للاستفسارات:
+📱 الجوال: +966581421483
+📧 البريد الإلكتروني: khaledjamal51@yahoo.com
+
+مع تحياتي
+خالد جمال عبدالناصر
+مطور الحلول الرقمية`);
+            
+            window.open(`mailto:?subject=${subject}&body=${body}`, '_blank');
+            showFeedbackMessage('✉️ تم فتح تطبيق البريد الإلكتروني لإرسال العقد', 'info');
+        }
+
+        // وظيفة تحميل العقد كـ PDF
+        function downloadContractAsPDF() {
+            showFeedbackMessage('🔄 جاري تحضير ملف PDF...', 'info');
+            
+            // فتح العقد المحسن للـ PDF في نافذة جديدة
+            const pdfWindow = window.open('عقد_العمل_PDF_محسن.html', '_blank');
+            
+            // إظهار تعليمات للمستخدم
+            setTimeout(() => {
+                showFeedbackMessage('📄 تم فتح العقد المحسن! اضغط Ctrl+P أو Cmd+P لحفظه كـ PDF', 'success');
+            }, 1000);
+            
+            // إضافة تعليمات إضافية
+            setTimeout(() => {
+                showFeedbackMessage('💡 نصيحة: اختر "حفظ كـ PDF" من خيارات الطباعة للحصول على أفضل جودة', 'info');
+            }, 4000);
         }
 
         // Add loading animation to buttons
