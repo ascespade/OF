@@ -8,6 +8,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Preconnect to external domains for better performance -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
     <style>
         * {
             font-family: 'Tajawal', sans-serif;
@@ -244,10 +251,235 @@
             border-radius: 2px;
         }
         
+        /* Responsive Design Improvements */
+        @media (max-width: 1200px) {
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+            
+            .section-card {
+                padding: 25px;
+                margin-bottom: 25px;
+            }
+            
+            .phase-card {
+                padding: 20px;
+            }
+            
+            .stats-number {
+                font-size: 36px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 40px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: clamp(1.75rem, 5vw, 2.5rem);
+            }
+            
+            .hero-section h2 {
+                font-size: clamp(1.1rem, 3vw, 1.5rem);
+            }
+            
+            .hero-section p {
+                font-size: clamp(0.9rem, 2.5vw, 1.125rem);
+            }
+            
+            .section-card {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            
+            .phase-card {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+            
+            .timeline-item {
+                margin-left: 20px;
+                padding-left: 30px;
+            }
+            
+            .tech-stack-item {
+                padding: 12px;
+                margin-bottom: 10px;
+            }
+            
+            .stats-card {
+                padding: 20px;
+                margin-bottom: 15px;
+            }
+            
+            .stats-number {
+                font-size: 32px;
+            }
+            
+            .navbar-custom {
+                padding: 0.5rem 0;
+            }
+            
+            .btn-custom {
+                padding: 10px 25px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-section {
+                padding: 30px 0;
+            }
+            
+            .logo-container {
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+            
+            .logo-container img {
+                height: 60px;
+            }
+            
+            .section-card {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+            
+            .phase-card {
+                padding: 12px;
+            }
+            
+            .phase-number {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            
+            .feature-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            
+            .stats-card {
+                padding: 15px;
+            }
+            
+            .stats-number {
+                font-size: 28px;
+            }
+            
+            .timeline-item {
+                margin-left: 15px;
+                padding-left: 25px;
+            }
+            
+            .tech-stack-item {
+                padding: 10px;
+                text-align: center;
+            }
+            
+            .benefit-card {
+                padding: 15px;
+            }
+            
+            .table-responsive {
+                font-size: 0.8rem;
+            }
+            
+            .btn-custom {
+                padding: 8px 20px;
+                font-size: 0.85rem;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .container {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+            
+            .section-card {
+                padding: 12px;
+            }
+            
+            .stats-number {
+                font-size: 24px;
+            }
+            
+            .btn-custom {
+                padding: 6px 15px;
+                font-size: 0.8rem;
+            }
+        }
+        
+        /* Fluid Typography */
+        body {
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+        }
+        
+        h1 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+        }
+        
+        h2 {
+            font-size: clamp(1.25rem, 3.5vw, 2rem);
+        }
+        
+        h3 {
+            font-size: clamp(1.1rem, 3vw, 1.75rem);
+        }
+        
+        h4 {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+        }
+        
+        h5 {
+            font-size: clamp(0.95rem, 2vw, 1.25rem);
+        }
+        
+        h6 {
+            font-size: clamp(0.9rem, 1.5vw, 1rem);
+        }
+        
+        /* Improved Grid System */
+        .row {
+            margin-left: -0.75rem;
+            margin-right: -0.75rem;
+        }
+        
+        .row > * {
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+        }
+        
+        @media (max-width: 576px) {
+            .row {
+                margin-left: -0.5rem;
+                margin-right: -0.5rem;
+            }
+            
+            .row > * {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+        }
+
         @media print {
             body { background: white !important; }
             .hero-section { background: #1e3c72 !important; }
             .section-card { box-shadow: none !important; border: 1px solid #ddd !important; }
+            .navbar-custom { display: none !important; }
         }
     </style>
 </head>
@@ -263,7 +495,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto flex-wrap">
                     <li class="nav-item"><a class="nav-link" href="#overview">نظرة عامة</a></li>
                     <li class="nav-item"><a class="nav-link" href="#phases">المراحل</a></li>
                     <li class="nav-item"><a class="nav-link" href="#features">المميزات</a></li>

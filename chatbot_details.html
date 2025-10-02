@@ -8,6 +8,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Preconnect to external domains for better performance -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com">
     <style>
         * {
             font-family: 'Tajawal', sans-serif;
@@ -282,6 +289,268 @@
             color: #dc3545;
             font-size: 18px;
         }
+        
+        /* Responsive Design Improvements */
+        @media (max-width: 1200px) {
+            .container {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .hero-section {
+                padding: 80px 0;
+            }
+            
+            .feature-card {
+                padding: 25px;
+                margin-bottom: 25px;
+            }
+            
+            .chatbot-icon {
+                width: 120px;
+                height: 120px;
+                margin-bottom: 25px;
+            }
+            
+            .metric-card {
+                padding: 25px;
+            }
+            
+            .metric-number {
+                font-size: 40px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: clamp(1.75rem, 5vw, 2.5rem);
+            }
+            
+            .hero-section h2 {
+                font-size: clamp(1.1rem, 3vw, 1.5rem);
+            }
+            
+            .hero-section p {
+                font-size: clamp(0.9rem, 2.5vw, 1.125rem);
+            }
+            
+            .chatbot-icon {
+                width: 100px;
+                height: 100px;
+                margin-bottom: 20px;
+            }
+            
+            .feature-card {
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+            
+            .feature-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+                margin-bottom: 15px;
+            }
+            
+            .strength-card {
+                padding: 20px;
+                margin-bottom: 15px;
+            }
+            
+            .flow-diagram {
+                padding: 30px;
+                margin: 20px 0;
+            }
+            
+            .flow-step {
+                padding: 15px;
+                margin: 10px 0;
+            }
+            
+            .metric-card {
+                padding: 20px;
+                margin-bottom: 15px;
+            }
+            
+            .metric-number {
+                font-size: 36px;
+            }
+            
+            .demo-chat {
+                padding: 15px;
+                max-height: 350px;
+            }
+            
+            .chat-bubble {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+            
+            .chat-avatar {
+                width: 35px;
+                height: 35px;
+                font-size: 16px;
+            }
+            
+            .comparison-table th,
+            .comparison-table td {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-section {
+                padding: 40px 0;
+            }
+            
+            .chatbot-icon {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 15px;
+            }
+            
+            .feature-card {
+                padding: 15px;
+                margin-bottom: 15px;
+            }
+            
+            .feature-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            
+            .strength-card {
+                padding: 15px;
+            }
+            
+            .flow-diagram {
+                padding: 20px;
+            }
+            
+            .flow-step {
+                padding: 12px;
+            }
+            
+            .metric-card {
+                padding: 15px;
+            }
+            
+            .metric-number {
+                font-size: 32px;
+            }
+            
+            .demo-chat {
+                padding: 12px;
+                max-height: 300px;
+            }
+            
+            .chat-bubble {
+                padding: 8px 12px;
+                font-size: 0.85rem;
+            }
+            
+            .chat-avatar {
+                width: 30px;
+                height: 30px;
+                font-size: 14px;
+                margin: 0 8px;
+            }
+            
+            .comparison-table {
+                font-size: 0.8rem;
+            }
+            
+            .comparison-table th,
+            .comparison-table td {
+                padding: 8px 10px;
+            }
+            
+            .tech-badge {
+                padding: 8px 15px;
+                font-size: 0.75rem;
+                margin: 3px;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .container {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+            
+            .feature-card {
+                padding: 12px;
+            }
+            
+            .metric-number {
+                font-size: 28px;
+            }
+            
+            .demo-chat {
+                padding: 10px;
+            }
+        }
+        
+        /* Fluid Typography */
+        body {
+            font-size: clamp(0.9rem, 2.5vw, 1rem);
+        }
+        
+        h1 {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+        }
+        
+        h2 {
+            font-size: clamp(1.25rem, 3.5vw, 2rem);
+        }
+        
+        h3 {
+            font-size: clamp(1.1rem, 3vw, 1.75rem);
+        }
+        
+        h4 {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+        }
+        
+        h5 {
+            font-size: clamp(0.95rem, 2vw, 1.25rem);
+        }
+        
+        h6 {
+            font-size: clamp(0.9rem, 1.5vw, 1rem);
+        }
+        
+        /* Improved Grid System */
+        .row {
+            margin-left: -0.75rem;
+            margin-right: -0.75rem;
+        }
+        
+        .row > * {
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+        }
+        
+        @media (max-width: 576px) {
+            .row {
+                margin-left: -0.5rem;
+                margin-right: -0.5rem;
+            }
+            
+            .row > * {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -296,7 +565,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto flex-wrap">
                     <li class="nav-item"><a class="nav-link" href="#overview">نظرة عامة</a></li>
                     <li class="nav-item"><a class="nav-link" href="#strengths">نقاط القوة</a></li>
                     <li class="nav-item"><a class="nav-link" href="#flows">المسارات الذكية</a></li>
