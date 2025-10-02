@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عقد تطوير الحلول الرقمية - مركز الهمم</title>
+    <style>
+        /* خطوط آمنة للـ PDF */
+        @font-face {
+            font-family: 'ArabicSafe';
+            src: local('Arial Unicode MS'), local('Tahoma'), local('Arial');
+            unicode-range: U+0600-06FF, U+0750-077F, U+08A0-08FF, U+FB50-FDFF, U+FE70-FEFF;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'ArabicSafe', 'Arial Unicode MS', 'Tahoma', 'Arial', sans-serif;
+        }
+        
+        body {
+            font-family: 'ArabicSafe', 'Arial Unicode MS', 'Tahoma', 'Arial', sans-serif;
+            line-height: 1.8;
+            color: #000;
+            background: white;
+            direction: rtl;
+            text-align: right;
+            font-size: 14pt;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20mm;
+            unicode-bidi: embed;
+        }
+        
+        /* محاذاة جميع النصوص يمين */
+        * {
+            text-align: right;
+            direction: rtl;
+            unicode-bidi: embed;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #000;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 20pt;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .header h2 {
+            font-size: 16pt;
+            color: #000;
+            font-weight: normal;
+            text-align: center;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+            page-break-inside: avoid;
+        }
+        
+        .section-title {
+            font-size: 16pt;
+            font-weight: bold;
+            color: #000;
+            border-right: 4px solid #000;
+            padding-right: 15px;
+            margin-bottom: 15px;
+            background: #f0f0f0;
+            padding: 10px 15px;
+            text-align: right;
+        }
+        
+        .party-info {
+            background: #f8f8f8;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: right;
+        }
+        
+        .party-title {
+            font-weight: bold;
+            font-size: 15pt;
+            color: #000;
+            margin-bottom: 10px;
+            text-align: right;
+        }
+        
+        .info-row {
+            margin-bottom: 8px;
+            text-align: right;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #000;
+            display: inline-block;
+            min-width: 120px;
+            text-align: right;
+        }
+        
+        .info-value {
+            color: #000;
+            text-align: right;
+        }
+        
+        .services-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border: 2px solid #000;
+        }
+        
+        .services-table th {
+            background: #000;
+            color: white;
+            padding: 12px;
+            text-align: right;
+            font-weight: bold;
+            border: 1px solid #000;
+        }
+        
+        .services-table td {
+            padding: 10px 12px;
+            border: 1px solid #000;
+            text-align: right;
+        }
+        
+        .services-table tr:nth-child(even) {
+            background: #f8f8f8;
+        }
+        
+        .price-highlight {
+            background: #000;
+            color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .payment-schedule {
+            background: #f0f0f0;
+            border: 1px solid #000;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .payment-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #ccc;
+            text-align: right;
+        }
+        
+        .payment-item:last-child {
+            border-bottom: none;
+            font-weight: bold;
+            background: #000;
+            color: white;
+            margin: 10px -20px -20px -20px;
+            padding: 15px 20px;
+            text-align: right;
+        }
+        
+        .terms-list {
+            list-style: none;
+            padding-right: 0;
+        }
+        
+        .terms-list li {
+            position: relative;
+            padding-right: 25px;
+            margin-bottom: 10px;
+            line-height: 1.6;
+            text-align: right;
+        }
+        
+        .terms-list li::before {
+            content: "•";
+            color: #000;
+            font-weight: bold;
+            position: absolute;
+            right: 0;
+            font-size: 16pt;
+        }
+        
+        .signature-section {
+            margin-top: 40px;
+            text-align: center;
+            page-break-inside: avoid;
+        }
+        
+        .signature-box {
+            width: 45%;
+            border: 2px solid #000;
+            padding: 20px;
+            text-align: center;
+            background: #f8f8f8;
+            display: inline-block;
+            margin: 0 2%;
+            vertical-align: top;
+        }
+        
+        .signature-title {
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .signature-line {
+            border-bottom: 2px solid #000;
+            height: 50px;
+            margin: 20px 0;
+        }
+        
+        .date-section {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f8f8;
+            border: 1px solid #ccc;
+        }
+        
+        .highlight-box {
+            background: #f8f8f8;
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 15px 0;
+            text-align: right;
+        }
+        
+        .highlight-box .title {
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 10px;
+            text-align: right;
+        }
+        
+        .contact-info {
+            background: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: right;
+        }
+        
+        .contact-info .title {
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 10px;
+            text-align: right;
+        }
+        
+        /* تحسينات للطباعة والـ PDF */
+        @media print {
+            body {
+                margin: 0;
+                padding: 15mm;
+                font-size: 11pt;
+                color: #000 !important;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+            
+            .signature-section {
+                page-break-before: auto;
+            }
+            
+            .services-table th {
+                background: #000 !important;
+                color: white !important;
+            }
+            
+            .price-highlight {
+                background: #000 !important;
+                color: white !important;
+            }
+            
+            * {
+                text-align: right !important;
+                direction: rtl !important;
+            }
+            
+            .header,
+            .header h1,
+            .header h2,
+            .date-section,
+            .signature-section,
+            .signature-box,
+            .signature-title {
+                text-align: center !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>عقد تطوير الحلول الرقمية</h1>
+        <h2>مركز الهمم للرعاية الطبية المتخصصة</h2>
+        <p style="margin-top: 15px; color: #666;">جدة - المملكة العربية السعودية</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">بيانات أطراف العقد</div>
+        
+        <div class="party-info">
+            <div class="party-title">الطرف الأول (مقدم الخدمة):</div>
+            <div class="info-row">
+                <span class="info-label">الاسم:</span>
+                <span class="info-value">خالد جمال عبدالناصر</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">التخصص:</span>
+                <span class="info-value">مطور حلول رقمية ومواقع إلكترونية</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">رقم الجوال:</span>
+                <span class="info-value">+966581421483</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">البريد الإلكتروني:</span>
+                <span class="info-value">khaledjamal51@yahoo.com</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">العنوان:</span>
+                <span class="info-value">جدة، المملكة العربية السعودية</span>
+            </div>
+        </div>
+
+        <div class="party-info">
+            <div class="party-title">الطرف الثاني (العميل):</div>
+            <div class="info-row">
+                <span class="info-label">اسم المؤسسة:</span>
+                <span class="info-value">مركز الهمم للرعاية الطبية المتخصصة</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">نوع النشاط:</span>
+                <span class="info-value">مركز طبي متخصص في رعاية ذوي الاحتياجات الخاصة</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">العنوان:</span>
+                <span class="info-value">جدة، حي الصفا، شارع الأمير محمد بن عبدالعزيز، فندق دبليو ايه، الدور الثامن</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">أرقام التواصل:</span>
+                <span class="info-value">0126173693 | 0555381558</span>
+            </div>
+            <div class="info-row">
+                <span class="info-label">التقييم الحالي:</span>
+                <span class="info-value">4.7/5 نجوم على Google Business</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">نطاق العمل والخدمات المطلوبة</div>
+        
+        <table class="services-table">
+            <thead>
+                <tr>
+                    <th style="width: 50%;">الخدمة</th>
+                    <th style="width: 30%;">التفاصيل</th>
+                    <th style="width: 20%;">السعر (ريال سعودي)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>الموقع الإلكتروني + نظام البريد المؤسسي</strong></td>
+                    <td>
+                        • تصميم متجاوب لجميع الأجهزة<br>
+                        • نظام حجز المواعيد الإلكتروني<br>
+                        • تحسين محركات البحث (SEO)<br>
+                        • نظام بريد مؤسسي احترافي<br>
+                        • لوحة تحكم سهلة الاستخدام
+                    </td>
+                    <td style="text-align: center; font-weight: bold;">6,500</td>
+                </tr>
+                <tr>
+                    <td><strong>الشات بوت الذكي "مُعين" عبر واتساب</strong></td>
+                    <td>
+                        • مساعد رقمي ذكي بتعاطف مبرمج<br>
+                        • ردود تلقائية ذكية ومتطورة<br>
+                        • نظام حجز المواعيد التلقائي<br>
+                        • لوحة تحكم إدارية شاملة<br>
+                        • تقارير مفصلة وإحصائيات<br>
+                        • تكامل ذكي مع الأنظمة الحالية
+                    </td>
+                    <td style="text-align: center; font-weight: bold;">8,500</td>
+                </tr>
+                <tr>
+                    <td><strong>إدارة الحملات الإعلانية الرقمية</strong></td>
+                    <td>
+                        • حملات على 6 منصات إعلانية<br>
+                        • تحسين وتطوير Google Business<br>
+                        • تقارير شهرية مفصلة<br>
+                        • استهداف دقيق للجمهور المناسب<br>
+                        • تحسين مستمر للأداء
+                    </td>
+                    <td style="text-align: center; font-weight: bold;">4,500/شهر</td>
+                </tr>
+                <tr style="background: #e8e8e8;">
+                    <td colspan="2" style="text-align: center; font-weight: bold; font-size: 16pt;">
+                        <strong>إجمالي التكلفة الأولية (بخصم 15%)</strong>
+                    </td>
+                    <td class="price-highlight" style="font-size: 18pt;">12,750</td>
+                </tr>
+                <tr style="background: #f0f0f0;">
+                    <td colspan="2" style="text-align: center; font-weight: bold;">
+                        <strong>التكاليف الشهرية المستمرة</strong>
+                    </td>
+                    <td style="text-align: center; font-weight: bold; background: #ccc; color: #000;">5,100/شهر</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <div class="section-title">جدول الدفعات المالية</div>
+        
+        <div class="payment-schedule">
+            <div class="payment-item">
+                <span><strong>الدفعة الأولى (30%)</strong> - عند توقيع العقد</span><br>
+                <span style="font-weight: bold;">3,825 ريال</span>
+            </div>
+            <div class="payment-item">
+                <span><strong>الدفعة الثانية (40%)</strong> - عند تسليم النسخة التجريبية</span><br>
+                <span style="font-weight: bold;">5,100 ريال</span>
+            </div>
+            <div class="payment-item">
+                <span><strong>الدفعة الثالثة (30%)</strong> - عند التسليم النهائي والتشغيل</span><br>
+                <span style="font-weight: bold;">3,825 ريال</span>
+            </div>
+            <div class="payment-item">
+                <span><strong>إجمالي المبلغ المطلوب: 12,750 ريال سعودي</strong></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">الجدول الزمني للتنفيذ</div>
+        
+        <table class="services-table">
+            <thead>
+                <tr>
+                    <th>المرحلة</th>
+                    <th>المدة الزمنية</th>
+                    <th>المخرجات المتوقعة</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>الأسبوع الأول</strong></td>
+                    <td>7 أيام</td>
+                    <td>توقيع العقد، جمع المحتوى، بدء تطوير الموقع</td>
+                </tr>
+                <tr>
+                    <td><strong>الأسبوع الثاني</strong></td>
+                    <td>7 أيام</td>
+                    <td>إكمال تصميم الموقع، تحسين Google Business، إنشاء حسابات التواصل</td>
+                </tr>
+                <tr>
+                    <td><strong>الأسبوع الثالث</strong></td>
+                    <td>7 أيام</td>
+                    <td>إكمال برمجة الموقع، اختبار الشات بوت، إعداد الحملات الإعلانية</td>
+                </tr>
+                <tr>
+                    <td><strong>الأسبوع الرابع</strong></td>
+                    <td>7 أيام</td>
+                    <td>إطلاق الموقع، تفعيل الشات بوت، بدء الحملات الإعلانية</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="section">
+        <div class="section-title">التزامات ومسؤوليات الأطراف</div>
+        
+        <div class="highlight-box">
+            <div class="title">التزامات مقدم الخدمة (الطرف الأول):</div>
+            <ul class="terms-list">
+                <li>تطوير وتسليم جميع الخدمات المذكورة في العقد وفقاً للمواصفات المتفق عليها</li>
+                <li>الالتزام بالجدول الزمني المحدد لتسليم المشروع</li>
+                <li>تقديم الدعم الفني المجاني لمدة 3 أشهر من تاريخ التسليم</li>
+                <li>تسليم جميع الملفات المصدرية والأكواد البرمجية</li>
+                <li>تقديم 3 جولات تعديل مجانية لكل خدمة</li>
+                <li>ضمان جودة العمل وسلامة البرمجة</li>
+                <li>الحفاظ على سرية معلومات العميل</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <div class="title">التزامات العميل (الطرف الثاني):</div>
+            <ul class="terms-list">
+                <li>تسليم جميع الصور والفيديوهات والمحتوى الإبداعي (الكرييتف) للحملات الإعلانية</li>
+                <li>توفير النصوص والمحتوى الخاص بالموقع الإلكتروني</li>
+                <li>تقديم معلومات الخدمات والأسعار المحدثة</li>
+                <li>الموافقة على التصاميم خلال 3 أيام عمل لضمان عدم التأخير</li>
+                <li>سداد الدفعات المالية في المواعيد المحددة</li>
+                <li>التعاون في تقديم المعلومات اللازمة لإنجاز العمل</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">الشروط والأحكام العامة</div>
+        
+        <ul class="terms-list">
+            <li><strong>مدة العقد:</strong> يسري هذا العقد من تاريخ التوقيع حتى إتمام جميع الخدمات المتفق عليها</li>
+            <li><strong>الضمان:</strong> ضمان شامل على جودة العمل لمدة 6 أشهر من تاريخ التسليم النهائي</li>
+            <li><strong>الدعم الفني:</strong> دعم فني مجاني لمدة 3 أشهر، ثم بتكلفة 300 ريال شهرياً</li>
+            <li><strong>حقوق الملكية:</strong> تنتقل جميع حقوق الملكية الفكرية للعميل بعد سداد كامل المبلغ</li>
+            <li><strong>التعديلات:</strong> أي تعديلات إضافية خارج النطاق المتفق عليه تتطلب اتفاقية منفصلة</li>
+            <li><strong>إلغاء العقد:</strong> في حالة إلغاء العقد من قبل العميل، يحتفظ مقدم الخدمة بالمبالغ المدفوعة مقابل العمل المنجز</li>
+            <li><strong>القوة القاهرة:</strong> لا يتحمل أي من الطرفين المسؤولية في حالة حدوث ظروف قاهرة تمنع تنفيذ العقد</li>
+            <li><strong>فض النزاعات:</strong> أي نزاع ينشأ عن هذا العقد يتم حله ودياً، وإلا فيحال للجهات المختصة في المملكة العربية السعودية</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <div class="section-title">معلومات إضافية مهمة</div>
+        
+        <div class="contact-info">
+            <div class="title">استراتيجية التكاملات:</div>
+            <p>سيتم تقييم الأنظمة الحالية لديكم أولاً. في حالة عدم توفر تكاملات API، سننشئ أنظمة مبسطة قابلة للتوسع بتكلفة إضافية 2,000 ريال فقط، مما يضمن بناء منظومة رقمية متكاملة خاصة بكم.</p>
+        </div>
+
+        <div class="contact-info">
+            <div class="title">الرؤية طويلة المدى:</div>
+            <p>الهدف الاستراتيجي هو بناء منظومة رقمية خاصة بكم تحقق الاستقلالية الكاملة وتوفر التكاليف الشهرية للأنظمة الخارجية، مع إمكانية التوسع والتطوير المستقبلي.</p>
+        </div>
+    </div>
+
+    <div class="date-section">
+        <p style="font-weight: bold; font-size: 16pt;">تاريخ إعداد العقد</p>
+        <p style="margin: 10px 0; font-size: 15pt;">التاريخ الهجري: _____ / _____ / 1446 هـ</p>
+        <p style="font-size: 15pt;">التاريخ الميلادي: _____ / _____ / 2024 م</p>
+        <p style="margin-top: 15px; color: #666; font-size: 12pt;">مدة صلاحية هذا العرض: 30 يوماً من تاريخ الإعداد</p>
+    </div>
+
+    <div class="signature-section">
+        <div class="signature-box">
+            <div class="signature-title">توقيع الطرف الأول</div>
+            <div style="margin: 15px 0;">
+                <strong>خالد جمال عبدالناصر</strong><br>
+                <span style="color: #666;">مطور الحلول الرقمية</span>
+            </div>
+            <div class="signature-line"></div>
+            <div style="font-size: 12pt; color: #666;">
+                التوقيع والتاريخ
+            </div>
+        </div>
+
+        <div class="signature-box">
+            <div class="signature-title">توقيع الطرف الثاني</div>
+            <div style="margin: 15px 0;">
+                <strong>ممثل مركز الهمم</strong><br>
+                <span style="color: #666;">المدير المفوض</span>
+            </div>
+            <div class="signature-line"></div>
+            <div style="font-size: 12pt; color: #666;">
+                التوقيع والتاريخ
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-top: 40px; text-align: center; padding: 20px; background: #f8f8f8; border: 1px solid #ccc;">
+        <p style="font-weight: bold; margin-bottom: 10px;">للاستفسارات والتواصل</p>
+        <p><strong>خالد جمال عبدالناصر</strong></p>
+        <p>الجوال: +966581421483</p>
+        <p>البريد الإلكتروني: khaledjamal51@yahoo.com</p>
+        <p style="margin-top: 15px; font-size: 12pt; color: #666;">
+            © 2024 - جميع الحقوق محفوظة<br>
+            تم إعداد هذا العقد وفقاً للأنظمة المعمول بها في المملكة العربية السعودية
+        </p>
+    </div>
+
+    <script>
+        // تحسين الطباعة للخطوط العربية
+        window.addEventListener('beforeprint', function() {
+            document.body.style.fontFamily = "'Arial Unicode MS', 'Tahoma', 'Arial', sans-serif";
+        });
+        
+        // إضافة زر طباعة سريع
+        document.addEventListener('DOMContentLoaded', function() {
+            const printBtn = document.createElement('button');
+            printBtn.innerHTML = '🖨️ طباعة العقد';
+            printBtn.style.cssText = `
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                z-index: 1000;
+                background: #000;
+                color: white;
+                border: none;
+                padding: 15px 25px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-family: 'Arial Unicode MS', 'Tahoma', sans-serif;
+                font-weight: bold;
+            `;
+            
+            printBtn.onclick = function() {
+                window.print();
+            };
+            
+            document.body.appendChild(printBtn);
+            
+            // إخفاء الزر عند الطباعة
+            const style = document.createElement('style');
+            style.innerHTML = '@media print { button { display: none !important; } }';
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>

@@ -20,6 +20,121 @@
             font-family: 'Tajawal', sans-serif;
         }
         
+        /* RTL Enhancements */
+        body {
+            text-align: right;
+            direction: rtl;
+            font-feature-settings: "liga" 1, "kern" 1;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.7;
+        }
+        
+        /* Enhanced Arabic Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            word-spacing: 0.1em;
+            text-align: right;
+        }
+        
+        p, li, span {
+            word-spacing: 0.05em;
+            letter-spacing: -0.01em;
+        }
+        
+        /* RTL Card Improvements */
+        .feature-card {
+            text-align: right;
+        }
+        
+        .strength-card {
+            text-align: right;
+        }
+        
+        /* RTL Navigation */
+        .navbar-nav {
+            direction: rtl;
+        }
+        
+        .nav-link {
+            text-align: center;
+        }
+        
+        /* RTL Icon Adjustments */
+        .me-2 {
+            margin-left: 0.5rem !important;
+            margin-right: 0 !important;
+        }
+        
+        .ms-2 {
+            margin-right: 0.5rem !important;
+            margin-left: 0 !important;
+        }
+        
+        .me-3 {
+            margin-left: 1rem !important;
+            margin-right: 0 !important;
+        }
+        
+        /* RTL Flow Diagrams */
+        .flow-diagram {
+            text-align: right;
+        }
+        
+        .flow-step {
+            text-align: right;
+        }
+        
+        /* RTL Chat Demo */
+        .demo-chat {
+            direction: rtl;
+        }
+        
+        .chat-message.user {
+            justify-content: flex-start;
+        }
+        
+        .chat-message:not(.user) {
+            justify-content: flex-end;
+        }
+        
+        .chat-bubble {
+            text-align: right;
+        }
+        
+        .chat-bubble.user {
+            text-align: right;
+        }
+        
+        .chat-bubble.bot {
+            text-align: right;
+        }
+        
+        /* RTL Comparison Table */
+        .comparison-table {
+            direction: rtl;
+        }
+        
+        .comparison-table th {
+            text-align: right;
+        }
+        
+        .comparison-table td {
+            text-align: right;
+        }
+        
+        .comparison-table .text-center {
+            text-align: center !important;
+        }
+        
+        /* RTL Tech Badges */
+        .tech-badge {
+            margin: 5px;
+            text-align: center;
+        }
+        
         body {
             background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
             min-height: 100vh;

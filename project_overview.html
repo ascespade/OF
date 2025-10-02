@@ -20,6 +20,113 @@
             font-family: 'Tajawal', sans-serif;
         }
         
+        /* RTL Enhancements */
+        body {
+            text-align: right;
+            direction: rtl;
+            font-feature-settings: "liga" 1, "kern" 1;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.7;
+        }
+        
+        /* Enhanced Arabic Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            word-spacing: 0.1em;
+            text-align: right;
+        }
+        
+        p, li, span {
+            word-spacing: 0.05em;
+            letter-spacing: -0.01em;
+        }
+        
+        /* RTL Card Improvements */
+        .section-card {
+            text-align: right;
+        }
+        
+        .phase-card {
+            text-align: right;
+        }
+        
+        .feature-card {
+            text-align: right;
+        }
+        
+        /* RTL Navigation */
+        .navbar-nav {
+            direction: rtl;
+        }
+        
+        .nav-link {
+            text-align: center;
+        }
+        
+        /* RTL Icon Adjustments */
+        .me-2 {
+            margin-left: 0.5rem !important;
+            margin-right: 0 !important;
+        }
+        
+        .ms-2 {
+            margin-right: 0.5rem !important;
+            margin-left: 0 !important;
+        }
+        
+        .me-3 {
+            margin-left: 1rem !important;
+            margin-right: 0 !important;
+        }
+        
+        /* RTL Timeline Improvements */
+        .timeline-item {
+            text-align: right;
+            border-right: 3px solid #667eea;
+            border-left: none;
+            margin-right: 30px;
+            margin-left: 0;
+            padding-right: 40px;
+            padding-left: 0;
+        }
+        
+        .timeline-item::before {
+            right: -8px;
+            left: auto;
+        }
+        
+        /* RTL Tech Stack */
+        .tech-stack-item {
+            text-align: center;
+        }
+        
+        /* RTL Stats */
+        .stats-card {
+            text-align: center;
+        }
+        
+        /* RTL Benefits */
+        .benefit-card {
+            text-align: right;
+        }
+        
+        /* RTL Table Improvements */
+        .table {
+            text-align: right;
+        }
+        
+        .table th {
+            text-align: right;
+            font-weight: 600;
+        }
+        
+        .table td {
+            text-align: right;
+        }
+        
         body {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
@@ -472,6 +579,14 @@
             .row > * {
                 padding-left: 0.5rem;
                 padding-right: 0.5rem;
+            }
+            
+            /* RTL Mobile Timeline Fix */
+            .timeline-item {
+                margin-right: 15px;
+                margin-left: 0;
+                padding-right: 25px;
+                padding-left: 0;
             }
         }
 
