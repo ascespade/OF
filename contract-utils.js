@@ -53,7 +53,7 @@ class ContractUtils {
                     📄 تحميل Word
                 </button>
                 
-                <button onclick="contractUtils.downloadAsPDF()" style="
+                <button onclick="window.open('عقد_العمل_PDF_محسن.html', '_blank')" style="
                     background: #dc3545;
                     color: white;
                     border: none;

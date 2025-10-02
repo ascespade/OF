@@ -1711,20 +1711,10 @@
                                     </h5>
                                     <p class="card-text">احصل على نسخة PDF كاملة من العقد</p>
                                     
-                                    <button class="btn btn-primary btn-lg mb-3" onclick="downloadContract()">
-                                        <i class="fas fa-file-pdf me-2"></i>
-                                        تحميل العقد PDF
+                                    <button class="btn btn-success btn-lg mb-3" onclick="openContractWithFeedback()" style="width: 100%;">
+                                        <i class="fas fa-file-contract me-2"></i>
+                                        العقد الاحترافي
                                     </button>
-                                    
-                                    <a href="عقد_العمل_النهائي.html" target="_blank" class="btn btn-success btn-lg mb-3" style="display: block; text-decoration: none;">
-                                        <i class="fas fa-file-word me-2"></i>
-                                        العقد الاحترافي (Word)
-                                    </a>
-                                    
-                                    <a href="عقد_العمل_PDF_محسن.html" target="_blank" class="btn btn-warning btn-lg mb-3" style="display: block; text-decoration: none; color: #000;">
-                                        <i class="fas fa-file-pdf me-2"></i>
-                                        العقد محسن للـ PDF
-                                    </a>
                                     
                                     <button class="btn btn-success btn-lg mb-3" onclick="sendWhatsApp()">
                                         <i class="fab fa-whatsapp me-2"></i>
@@ -2071,6 +2061,105 @@
             setTimeout(() => {
                 successMessage.style.display = 'none';
             }, 5000);
+        }
+
+        // وظيفة فتح العقد مع الفيدباك
+        function openContractWithFeedback() {
+            // تغيير نص الزر وإضافة تأثير التحميل
+            const button = event.target.closest('button');
+            const originalText = button.innerHTML;
+            
+            button.innerHTML = '<span class="loading"></span> جاري فتح العقد...';
+            button.disabled = true;
+            button.style.opacity = '0.7';
+            
+            // إظهار رسالة فيدباك
+            showFeedbackMessage('🔄 جاري تحضير العقد الاحترافي...', 'info');
+            
+            setTimeout(() => {
+                // فتح العقد في نافذة جديدة
+                window.open('عقد_العمل_النهائي.html', '_blank');
+                
+                // إظهار رسالة نجاح
+                showFeedbackMessage('✅ تم فتح العقد بنجاح! يمكنك الآن طباعته أو تحميله كـ PDF', 'success');
+                
+                // إعادة الزر لحالته الأصلية
+                button.innerHTML = originalText;
+                button.disabled = false;
+                button.style.opacity = '1';
+            }, 1500);
+        }
+
+        // وظيفة إظهار رسائل الفيدباك
+        function showFeedbackMessage(message, type = 'info') {
+            const messageDiv = document.createElement('div');
+            messageDiv.innerHTML = message;
+            
+            let bgColor = '#17a2b8'; // info
+            if (type === 'success') bgColor = '#28a745';
+            if (type === 'warning') bgColor = '#ffc107';
+            if (type === 'error') bgColor = '#dc3545';
+            
+            messageDiv.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background: ${bgColor};
+                color: white;
+                padding: 15px 25px;
+                border-radius: 10px;
+                font-family: 'Cairo', sans-serif;
+                font-weight: 600;
+                font-size: 14px;
+                z-index: 10000;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                text-align: right;
+                direction: rtl;
+                max-width: 350px;
+                animation: slideInRight 0.5s ease-out;
+            `;
+            
+            // إضافة CSS للأنيميشن
+            if (!document.getElementById('feedback-styles')) {
+                const style = document.createElement('style');
+                style.id = 'feedback-styles';
+                style.innerHTML = `
+                    @keyframes slideInRight {
+                        from {
+                            transform: translateX(100%);
+                            opacity: 0;
+                        }
+                        to {
+                            transform: translateX(0);
+                            opacity: 1;
+                        }
+                    }
+                    
+                    @keyframes slideOutRight {
+                        from {
+                            transform: translateX(0);
+                            opacity: 1;
+                        }
+                        to {
+                            transform: translateX(100%);
+                            opacity: 0;
+                        }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+            
+            document.body.appendChild(messageDiv);
+            
+            // إزالة الرسالة بعد فترة
+            setTimeout(() => {
+                messageDiv.style.animation = 'slideOutRight 0.5s ease-in';
+                setTimeout(() => {
+                    if (document.body.contains(messageDiv)) {
+                        document.body.removeChild(messageDiv);
+                    }
+                }, 500);
+            }, type === 'success' ? 4000 : 2500);
         }
 
         // Add loading animation to buttons
